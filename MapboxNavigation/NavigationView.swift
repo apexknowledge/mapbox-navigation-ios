@@ -98,7 +98,7 @@ open class NavigationView: UIView {
     }()
     
     lazy var overviewButton = FloatingButton.rounded(image: Images.overview)
-    lazy var muteButton = FloatingButton.rounded(image: Images.volumeUp, selectedImage: Images.volumeOff)
+    open lazy var muteButton = FloatingButton.rounded(image: Images.volumeUp, selectedImage: Images.volumeOff)
     lazy var reportButton = FloatingButton.rounded(image: Images.feedback)
     
     lazy var lanesView: LanesView = .forAutoLayout(hidden: true)
@@ -120,7 +120,7 @@ open class NavigationView: UIView {
     }()
     
     lazy var bottomBannerContentView: BottomBannerContentView = .forAutoLayout()
-    lazy var bottomBannerView: BottomBannerView = {
+    open lazy var bottomBannerView: BottomBannerView = {
         let view: BottomBannerView = .forAutoLayout()
         view.cancelButton.addTarget(self, action: Actions.cancelButton, for: .touchUpInside)
         return view

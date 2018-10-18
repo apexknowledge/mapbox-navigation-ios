@@ -259,7 +259,16 @@ open class NavigationViewController: UIViewController {
             return mapViewController?.mapView
         }
     }
-    
+
+    /**
+     The main navigation view displayed inside the view controller.
+     */
+    @objc public var navigationView: NavigationView? {
+        get {
+            return mapViewController?.navigationView
+        }
+    }
+
     /**
      Determines whether the user location annotation is moved from the raw user location reported by the device to the nearest location along the route.
      
