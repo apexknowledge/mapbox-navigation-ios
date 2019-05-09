@@ -43,6 +43,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.module_name = "MapboxNavigation"
 
+  s.dependency "MapboxMobileEvents", "~> 0.9.3"         # Always pin to a patch release if pre-1.0
   s.dependency "MapboxCoreNavigation", "#{s.version.to_s}"
   s.dependency "Mapbox-iOS-SDK", "~> 4.3"
   s.dependency "Solar", "~> 2.1"
