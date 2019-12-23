@@ -264,7 +264,16 @@ open class NavigationViewController: UIViewController {
     deinit {
         navigationService.stop()
     }
-    
+
+    /**
+     The main navigation view displayed inside the view controller.
+     */
+    @objc public var navigationView: NavigationView? {
+        get {
+            return mapViewController?.navigationView
+        }
+    }
+
     override open func viewDidLoad() {
         super.viewDidLoad()
         // Initialize voice controller if it hasn't been overridden.
